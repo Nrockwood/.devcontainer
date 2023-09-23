@@ -23,7 +23,7 @@ build: ##> builds the docker container
 
 .PHONY: run
 run: ##> runs the docker container
-	docker run --rm -it -w /workspace -v $(shell pwd):/workspace devcontainer /bin/zsh
+	docker run --rm -it -w /workspace -v $(shell pwd)/..:/workspace devcontainer /bin/zsh
 
 .PHONY: stop
 stop: ##> stops the docker container
