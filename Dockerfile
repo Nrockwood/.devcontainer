@@ -12,4 +12,9 @@ RUN yum --disableplugin=subscription-manager -y update \
         cmake \
         make \
         gdb \
+        python3-pip \
     && yum --disableplugin=subscription-manager clean all
+
+RUN pip3 install \
+    numpy \
+    pandas
